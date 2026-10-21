@@ -127,7 +127,8 @@ body.ready .fade-in{opacity:1;transform:none}
   background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
   color:#fff;animation:spin 46s linear infinite reverse;box-shadow:0 10px 30px rgba(0,0,0,.25);cursor:pointer;transition:background .25s,border-color .25s}
 .node>span:hover{background:rgba(217,155,43,.22);border-color:var(--gold)}
-.node svg{width:34px;height:34px}
+.node svg{width:42px;height:42px}
+.node>span{--tile:#3a1658;--acc:var(--gold);--ink2:var(--night)}
 @keyframes spin{to{transform:rotate(360deg)}}
 .scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.4);border-radius:14px}
 .scroll-cue::after{content:'';position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:#fff;animation:cue 1.8s infinite}
@@ -158,7 +159,9 @@ html[lang="ar"] .kicker{letter-spacing:0;font-size:14px}
 .svc:hover::before{opacity:1}
 .svc .ic{width:62px;height:62px;border-radius:17px;display:flex;align-items:center;justify-content:center;color:var(--purple);
   background:var(--lilac);margin-bottom:22px;transition:background .45s,color .45s,transform .45s var(--ease)}
-.svc .ic svg{width:34px;height:34px}
+.svc .ic svg{width:40px;height:40px}
+.svc .ic{--tile:var(--lilac);--acc:var(--gold);--ink2:var(--night)}
+.svc:hover .ic{--tile:#5a1f80;--acc:#fff}
 .svc:hover .ic{background:rgba(255,255,255,.12);color:var(--gold2);transform:rotate(-6deg) scale(1.06)}
 .svc .num{position:absolute;top:22px;inset-inline-end:24px;font:800 46px 'Sora',sans-serif;color:var(--lilac);transition:color .45s}
 .svc:hover .num{color:rgba(255,255,255,.08)}
@@ -257,7 +260,8 @@ html.lock,html.lock body{overflow:hidden}
   transform:translateY(30px) scale(.96);transition:transform .45s var(--ease);box-shadow:0 40px 100px rgba(10,2,18,.5)}
 .modal.open .mbox{transform:none}
 .mbox .ic{width:66px;height:66px;border-radius:18px;background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
-.mbox .ic svg{width:36px;height:36px}
+.mbox .ic svg{width:44px;height:44px}
+.mbox .ic{--tile:#7d34ae;--acc:var(--gold2);--ink2:var(--night)}
 .mbox h3{font-size:26px;color:var(--plum);margin-bottom:10px}
 .mbox p{color:var(--muted);margin:0 0 18px}
 .mbox ul{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:10px}
@@ -283,7 +287,7 @@ main,.hero .wrap,.nav ul{transition:opacity .35s}
   .hero p.lead{margin-inline:auto}.hero .ctas,.chips{justify-content:center}
   .orbit-box{--R:min(175px,40vw);margin-top:30px}
   .node{width:60px;height:60px;margin:-30px}
-  .node>span{border-radius:18px}.node svg{width:28px;height:28px}
+  .node>span{border-radius:18px}.node svg{width:34px;height:34px}
   .svc-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr;row-gap:40px}.steps-line{display:none}
   .why,.contact{grid-template-columns:1fr}
@@ -328,27 +332,57 @@ main,.hero .wrap,.nav ul{transition:opacity .35s}
 <!-- ============ icon library ============ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="i-delivery" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="5" y="13" width="13" height="11" rx="2"/><circle cx="12" cy="34" r="5.5"/><circle cx="37" cy="34" r="5.5"/>
-      <path d="M12 34h10l5.5-11h5l4.5 11"/><path d="M27.5 23l-2.5-6h-4.5"/><path d="M6 24h13"/>
+    <symbol id="i-delivery" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="5" y="15" width="22" height="18" rx="3" style="fill:var(--acc,#d99b2b);stroke:var(--acc,#d99b2b)"/>
+      <path d="M10 22h12" style="stroke:var(--ink2,#2c0d40)" stroke-width="2.4"/>
+      <circle cx="15" cy="47" r="7.5" style="fill:currentColor;fill-opacity:.16"/><circle cx="50" cy="47" r="7.5" style="fill:currentColor;fill-opacity:.16"/>
+      <circle cx="15" cy="47" r="2" style="fill:currentColor"/><circle cx="50" cy="47" r="2" style="fill:currentColor"/>
+      <path d="M6 36h27l5 11H22" style="fill:currentColor;fill-opacity:.16"/>
+      <path d="M38 47l6-17h5"/><path d="M44 30l-3-9h-6"/><path d="M49 30l3 9"/>
     </symbol>
-    <symbol id="i-rental" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="15" cy="24" r="8.5"/><circle cx="15" cy="24" r="2.6"/><path d="M23.5 24H43M37 24v6.5M42.5 24v4.5"/>
+    <symbol id="i-rental" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 44v-7.5c0-2 1.3-3.6 3.2-4l6.3-1.4 7.4-8.4a6 6 0 014.5-2H40a6 6 0 014.6 2.2l6.4 8 5.6 1.3a4 4 0 013.4 4V44z" style="fill:currentColor;fill-opacity:.16"/>
+      <path d="M15 31h37M33 21v10"/>
+      <circle cx="17" cy="45" r="6" style="fill:var(--tile,#f4eefa)"/><circle cx="48" cy="45" r="6" style="fill:var(--tile,#f4eefa)"/>
+      <circle cx="17" cy="45" r="1.8" style="fill:currentColor"/><circle cx="48" cy="45" r="1.8" style="fill:currentColor"/>
+      <circle cx="51" cy="12" r="5.5" style="fill:var(--acc,#d99b2b);stroke:var(--acc,#d99b2b)"/>
+      <circle cx="51" cy="12" r="1.6" style="fill:var(--ink2,#2c0d40);stroke:none"/>
+      <path d="M45.5 12H34M38 12v4M41.5 12v3" style="stroke:var(--acc,#d99b2b)"/>
     </symbol>
-    <symbol id="i-ecom" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M10 17h28l-2.4 25H12.4z"/><path d="M17.5 17v-3.5a6.5 6.5 0 0113 0V17"/><path d="M18.5 29.5l4 4 7.5-8"/>
+    <symbol id="i-ecom" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 10h7l7 31h31l6-22H14"/>
+      <path d="M15.5 19H55l-6 22H18z" style="fill:currentColor;fill-opacity:.16;stroke:none"/>
+      <rect x="21" y="22" width="12" height="11" rx="1.5" style="fill:var(--acc,#d99b2b);stroke:var(--acc,#d99b2b)"/>
+      <rect x="35" y="25" width="10" height="8" rx="1.5" style="fill:var(--acc,#d99b2b);stroke:var(--acc,#d99b2b)"/>
+      <path d="M27 22v4" style="stroke:var(--ink2,#2c0d40)" stroke-width="2"/>
+      <circle cx="22" cy="51" r="4" style="fill:currentColor;fill-opacity:.16"/><circle cx="45" cy="51" r="4" style="fill:currentColor;fill-opacity:.16"/>
     </symbol>
-    <symbol id="i-customs" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="4" y="21" width="28" height="18" rx="1.5"/><path d="M10 21v18M16 21v18M22 21v18M28 21v18"/>
-      <path d="M30 5h9.5L44 9.5V22H30z"/><path d="M33.5 14l2.6 2.6L41 11.7"/>
+    <symbol id="i-customs" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="12" y="26" width="13" height="10" rx="1" style="fill:var(--acc,#d99b2b);stroke:var(--acc,#d99b2b)"/>
+      <rect x="26" y="26" width="13" height="10" rx="1" style="fill:currentColor;fill-opacity:.3"/>
+      <rect x="19" y="16" width="13" height="10" rx="1" style="fill:currentColor;fill-opacity:.3"/>
+      <path d="M42 36V22h7l3 14"/>
+      <path d="M4 36h56l-7 12H11z" style="fill:currentColor;fill-opacity:.16"/>
+      <path d="M4 55c4 0 4-3 8-3s4 3 8 3 4-3 8-3 4 3 8 3 4-3 8-3 4 3 8 3 4-3 8-3" stroke-width="2.6"/>
+      <circle cx="53" cy="12" r="8" style="fill:var(--acc,#d99b2b);stroke:var(--acc,#d99b2b)"/>
+      <path d="M49.5 12.2l2.5 2.5 4.6-5" style="stroke:var(--ink2,#2c0d40)" stroke-width="2.6"/>
     </symbol>
-    <symbol id="i-port" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M22 41V20l11-7 11 7v21"/><path d="M27 41v-9h12v9"/><path d="M27 36h12"/>
-      <rect x="3" y="27" width="14" height="9" rx="1"/><path d="M7.5 27v9M12.5 27v9"/><path d="M3 41h41"/><path d="M8 20h8m-3-3l3 3-3 3"/>
+    <symbol id="i-port" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M31 54V27l15-10 15 10v27z" style="fill:currentColor;fill-opacity:.16"/>
+      <path d="M37 54V36h18v18" style="fill:var(--tile,#f4eefa)"/><path d="M37 41h18M37 46h18M37 51h18" stroke-width="2"/>
+      <rect x="3" y="35" width="20" height="12" rx="1.5" style="fill:var(--acc,#d99b2b);stroke:var(--acc,#d99b2b)"/>
+      <path d="M8 38v6M13 38v6M18 38v6" style="stroke:var(--ink2,#2c0d40)" stroke-width="2"/>
+      <path d="M23 41h4l3 4v5h-27v-3"/>
+      <circle cx="9" cy="52" r="3.2" style="fill:var(--tile,#f4eefa)"/><circle cx="24" cy="52" r="3.2" style="fill:var(--tile,#f4eefa)"/>
+      <path d="M10 22h14m-4-4l4 4-4 4" style="stroke:var(--acc,#d99b2b)"/>
     </symbol>
-    <symbol id="i-truck" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M3 33V13h25v20"/><path d="M28 19h8.5l6.5 7.5V33h-3"/><path d="M3 33h3.5M16 33h15"/>
-      <circle cx="11" cy="34" r="4.5"/><circle cx="35.5" cy="34" r="4.5"/><path d="M32 19v7.5h11"/>
+    <symbol id="i-truck" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="16" width="36" height="27" rx="2" style="fill:currentColor;fill-opacity:.16"/>
+      <path d="M3 34h36" style="stroke:var(--acc,#d99b2b)"/>
+      <path d="M39 23h11l8 10v10H39z" style="fill:currentColor;fill-opacity:.16"/>
+      <path d="M43 27h6l4 6h-10z" style="fill:var(--acc,#d99b2b);stroke:var(--acc,#d99b2b)" stroke-width="2"/>
+      <circle cx="14" cy="46" r="5.5" style="fill:var(--tile,#f4eefa)"/><circle cx="49" cy="46" r="5.5" style="fill:var(--tile,#f4eefa)"/>
+      <circle cx="14" cy="46" r="1.6" style="fill:currentColor"/><circle cx="49" cy="46" r="1.6" style="fill:currentColor"/>
     </symbol>
     <symbol id="i-one" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.2-7 8-7s7 2.5 8 7"/></symbol>
     <symbol id="i-bill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"/><path d="M9 7h6M9 11h6M9 15h4"/></symbol>
@@ -569,6 +603,10 @@ main,.hero .wrap,.nav ul{transition:opacity .35s}
 
 <script>
 (function(){
+/* every visit / refresh opens on the overview, then the page unfolds as you scroll */
+try{ if('scrollRestoration' in history) history.scrollRestoration='manual'; }catch(e){}
+if(location.hash){ try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){} }
+window.scrollTo(0,0);
 /* ================= content (English / Arabic) ================= */
 var SERVICES=[
   {k:'delivery',icon:'i-delivery',
@@ -710,6 +748,17 @@ document.getElementById('langBtn').addEventListener('click',function(e){
   },220);
 });
 
+/* in-page links: smooth scroll without adding #section to the address (so a refresh never jumps down) */
+var RM=window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[href^="#"]'); if(!a) return;
+  var id=a.getAttribute('href').slice(1), t=id?document.getElementById(id):null;
+  if(!t && id!=='top') return;
+  e.preventDefault();
+  if(id==='top'||!t){ window.scrollTo({top:0,behavior:RM?'auto':'smooth'}); return; }
+  t.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'});
+});
+
 /* ================= scroll reveal ================= */
 var io=('IntersectionObserver' in window)? new IntersectionObserver(function(es){
   es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
@@ -730,6 +779,7 @@ function onScroll(){
   document.querySelectorAll('#menu a').forEach(function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+cur); });
 }
 window.addEventListener('scroll', onScroll, {passive:true});
+window.addEventListener('pageshow', function(e){ if(e.persisted) window.scrollTo(0,0); });
 window.addEventListener('resize', onScroll, {passive:true});
 toTop.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
 var burger=document.getElementById('burger');
