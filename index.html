@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>W Group W.L.L — Delivery, Rental, Car Finance, Customs, Food Distribution &amp; Transport in Qatar</title>
+<meta name="description" content="W Group W.L.L, Doha: delivery fleets, car rental with or without driver, lease-to-own car finance, customs clearance, food distribution and load transportation — one partner across Qatar.">
+<meta name="theme-color" content="#2c0d40">
+<meta property="og:type" content="website">
+<meta property="og:title" content="W Group W.L.L — One partner for every move your business makes">
+<meta property="og:description" content="Delivery fleets · Car rental · Car finance · Customs clearance · Food distribution · Load transportation — Doha, Qatar.">
+<meta property="og:image" content="assets/og-image.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#1c072b; --night:#2c0d40; --plum:#3a1153; --purple:#6b2496; --violet:#8a3bb5; --magenta:#a64bc4;
+  --gold:#d99b2b; --gold2:#f0c56a; --ink:#241032; --muted:#6f6080; --line:#ece4f2;
+  --paper:#ffffff; --cream:#faf7fc; --lilac:#f4eefa;
+  --r:18px; --ease:cubic-bezier(.22,.8,.22,1);
+  --fh:'Sora','Inter',system-ui,sans-serif; --fb:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+html[lang="ar"]{ --fh:'Tajawal','Sora',sans-serif; --fb:'Tajawal','Inter',sans-serif; }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--fb);color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--fh);line-height:1.15;margin:0;letter-spacing:-.01em}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3{letter-spacing:0;line-height:1.3}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- preloader ---------- */
+#loader{position:fixed;inset:0;z-index:100;background:radial-gradient(circle at 50% 40%,#4a1670,var(--deep) 70%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:transform .9s var(--ease) .1s}
+#loader img{width:150px;opacity:0;transform:scale(.85);animation:ldIn .9s var(--ease) forwards}
+#loader i{display:block;height:3px;width:0;background:var(--gold);border-radius:3px;animation:ldBar 1s var(--ease) .35s forwards}
+body.ready #loader{transform:translateY(-100%)}
+@keyframes ldIn{to{opacity:1;transform:none}}
+@keyframes ldBar{to{width:90px}}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset-inline:0;top:0;z-index:50;transition:background .35s,box-shadow .35s,padding .35s;padding:18px 0}
+.nav .wrap{display:flex;align-items:center;gap:22px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;font-family:'Sora',sans-serif;font-weight:800;letter-spacing:2px;font-size:15px}
+.brand img{height:30px;width:auto}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0}
+html[dir="rtl"] .nav ul{margin:0 auto 0 0}
+.nav ul a{color:rgba(255,255,255,.82);font-size:14px;font-weight:500;padding:8px 12px;border-radius:999px;transition:color .2s,background .2s;position:relative}
+.nav ul a:hover,.nav ul a.on{color:#fff;background:rgba(255,255,255,.1)}
+.lang{border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:999px;padding:7px 13px;font:600 13px var(--fb);cursor:pointer;transition:background .2s}
+.lang:hover{background:rgba(255,255,255,.12)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:13px 24px;font:600 15px var(--fb);cursor:pointer;
+  transition:transform .25s var(--ease),box-shadow .25s,background .25s;white-space:nowrap}
+.btn.gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1405;box-shadow:0 10px 26px rgba(217,155,43,.35)}
+.btn.gold:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(217,155,43,.45)}
+.btn.line{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn.line:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+.btn.sm{padding:9px 17px;font-size:13.5px}
+.nav.solid{background:rgba(28,7,43,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(10,2,18,.35);padding:10px 0}
+.burger{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden;
+  background:radial-gradient(1200px 700px at 80% 20%,#5b1d86 0%,transparent 60%),radial-gradient(900px 600px at 10% 90%,#3d1260 0%,transparent 60%),var(--deep);
+  padding:120px 0 90px}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;pointer-events:none;will-change:transform}
+.b1{width:420px;height:420px;background:#8a3bb5;top:-120px;inset-inline-end:-80px;animation:float 14s ease-in-out infinite}
+.b2{width:340px;height:340px;background:#d99b2b;bottom:-160px;inset-inline-start:10%;opacity:.28;animation:float 18s ease-in-out infinite reverse}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,40px)}}
+.grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:56px 56px;mask-image:radial-gradient(circle at 60% 40%,#000 0%,transparent 70%);-webkit-mask-image:radial-gradient(circle at 60% 40%,#000 0%,transparent 70%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold2);
+  background:rgba(217,155,43,.1);border:1px solid rgba(217,155,43,.35);padding:7px 14px;border-radius:999px}
+html[lang="ar"] .eyebrow{letter-spacing:0}
+.eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(217,155,43,.25);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(217,155,43,0)}}
+.hero h1{font-size:clamp(36px,5.6vw,66px);font-weight:800;margin:22px 0 20px}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em}
+.hero h1 .w>span{display:inline-block;transform:translateY(110%);transition:transform .9s var(--ease)}
+body.ready .hero h1 .w>span{transform:none}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:clamp(16px,1.6vw,19px);color:rgba(255,255,255,.8);max-width:560px;margin:0 0 30px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:38px}
+.chip{display:flex;align-items:center;gap:9px;font-size:13.5px;color:rgba(255,255,255,.88);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;padding:9px 14px}
+.chip b{color:var(--gold2);font-family:'Sora',sans-serif}
+.fade-in{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+body.ready .fade-in{opacity:1;transform:none}
+
+/* orbit */
+.orbit-box{--R:230px;position:relative;width:calc(var(--R) * 2);height:calc(var(--R) * 2);margin-inline:auto}
+.ring{position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(255,255,255,.16)}
+.ring.r2{inset:16%;border-style:solid;border-color:rgba(217,155,43,.18)}
+.ring.r3{inset:31%;border:0;background:radial-gradient(circle,rgba(138,59,181,.55),rgba(28,7,43,0) 70%);animation:glow 4s ease-in-out infinite}
+@keyframes glow{50%{transform:scale(1.08);opacity:.75}}
+.core{position:absolute;inset:34%;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 30% 25%,#7a2ea8,#3a1153 70%);box-shadow:0 20px 60px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.18)}
+.core img{width:70%}
+.orbit{position:absolute;inset:0;animation:spin 46s linear infinite}
+.node{position:absolute;top:50%;left:50%;width:76px;height:76px;margin:-38px;
+  transform:rotate(var(--a)) translate(calc(var(--R) - 4px)) rotate(calc(-1 * var(--a)))}
+.node>span{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;border-radius:22px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  color:#fff;animation:spin 46s linear infinite reverse;box-shadow:0 10px 30px rgba(0,0,0,.25);cursor:pointer;transition:background .25s,border-color .25s}
+.node>span:hover{background:rgba(217,155,43,.22);border-color:var(--gold)}
+.node svg{width:34px;height:34px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.4);border-radius:14px}
+.scroll-cue::after{content:'';position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:#fff;animation:cue 1.8s infinite}
+@keyframes cue{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+
+/* ---------- sections ---------- */
+section{position:relative}
+.sec{padding:110px 0}
+.sec.alt{background:var(--cream)}
+.head{max-width:720px;margin-bottom:54px}
+.head.center{text-align:center;margin-inline:auto}
+.kicker{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--purple);margin-bottom:14px}
+html[lang="ar"] .kicker{letter-spacing:0;font-size:14px}
+.kicker::before{content:'';display:inline-block;width:22px;height:2px;background:var(--gold);vertical-align:middle;margin-inline-end:10px}
+.head h2{font-size:clamp(30px,3.8vw,46px);font-weight:800;color:var(--plum)}
+.head p{color:var(--muted);font-size:17px;margin:16px 0 0}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px 28px;cursor:pointer;overflow:hidden;
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .3s;isolation:isolate}
+.svc::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,var(--plum),var(--purple));opacity:0;transition:opacity .45s var(--ease)}
+.svc:hover{transform:translateY(-8px);box-shadow:0 26px 60px rgba(58,17,83,.22);border-color:transparent}
+.svc:hover::before{opacity:1}
+.svc .ic{width:62px;height:62px;border-radius:17px;display:flex;align-items:center;justify-content:center;color:var(--purple);
+  background:var(--lilac);margin-bottom:22px;transition:background .45s,color .45s,transform .45s var(--ease)}
+.svc .ic svg{width:34px;height:34px}
+.svc:hover .ic{background:rgba(255,255,255,.12);color:var(--gold2);transform:rotate(-6deg) scale(1.06)}
+.svc .num{position:absolute;top:22px;inset-inline-end:24px;font:800 46px 'Sora',sans-serif;color:var(--lilac);transition:color .45s}
+.svc:hover .num{color:rgba(255,255,255,.08)}
+.svc h3{font-size:21px;color:var(--plum);margin-bottom:10px;transition:color .45s}
+.svc p{color:var(--muted);margin:0 0 18px;font-size:15px;transition:color .45s}
+.svc:hover h3{color:#fff}.svc:hover p{color:rgba(255,255,255,.78)}
+.more{font-weight:600;font-size:14px;color:var(--purple);display:inline-flex;align-items:center;gap:6px;transition:color .45s,gap .3s}
+.svc:hover .more{color:var(--gold2);gap:10px}
+html[dir="rtl"] .more .arr,html[dir="rtl"] .btn .arr{display:inline-block;transform:scaleX(-1)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;position:relative}
+.steps-line{position:absolute;top:31px;inset-inline:6%;height:2px;background:var(--line);overflow:hidden}
+.steps-line i{position:absolute;inset:0;background:linear-gradient(90deg,var(--purple),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform 1.8s var(--ease)}
+html[dir="rtl"] .steps-line i{transform-origin:right;background:linear-gradient(270deg,var(--purple),var(--gold))}
+.steps.in .steps-line i{transform:scaleX(1)}
+.step{position:relative;text-align:center}
+.step .dot{width:62px;height:62px;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;
+  background:var(--paper);border:2px solid var(--line);font:800 18px 'Sora',sans-serif;color:var(--purple);position:relative;z-index:1;
+  transition:background .5s,color .5s,border-color .5s;transition-delay:var(--d,0s)}
+.steps.in .step .dot{background:var(--purple);color:#fff;border-color:var(--purple);box-shadow:0 10px 26px rgba(107,36,150,.35)}
+.step h3{font-size:18px;color:var(--plum);margin-bottom:8px}
+.step p{color:var(--muted);font-size:14.5px;margin:0}
+
+/* fleet marquee */
+.fleet{background:linear-gradient(135deg,var(--deep),var(--plum));color:#fff;padding:100px 0;overflow:hidden}
+.fleet .head h2{color:#fff}.fleet .head p{color:rgba(255,255,255,.72)}.fleet .kicker{color:var(--gold2)}
+.marquee{display:flex;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.track{display:flex;gap:20px;padding-inline-end:20px;flex-shrink:0;animation:marq 38s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(-100%)}}
+html[dir="rtl"] .track{animation-name:marqR}
+@keyframes marqR{to{transform:translateX(100%)}}
+.veh{width:210px;flex-shrink:0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:26px 20px 20px;text-align:center;
+  transition:background .3s,transform .3s var(--ease)}
+.veh:hover{background:rgba(217,155,43,.14);transform:translateY(-6px)}
+.veh svg{width:120px;height:60px;color:var(--gold2);margin:0 auto 14px}
+.veh b{display:block;font-family:var(--fh);font-size:16px}
+
+/* why */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-list{display:grid;gap:18px}
+.wi{display:flex;gap:18px;padding:22px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line);transition:transform .4s var(--ease),box-shadow .4s}
+.wi:hover{transform:translateX(6px);box-shadow:0 16px 40px rgba(58,17,83,.12)}
+html[dir="rtl"] .wi:hover{transform:translateX(-6px)}
+.wi .ic{flex-shrink:0;width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;display:flex;align-items:center;justify-content:center}
+.wi .ic svg{width:26px;height:26px}
+.wi h3{font-size:17px;color:var(--plum);margin-bottom:4px}
+.wi p{margin:0;color:var(--muted);font-size:14.5px}
+.why-card{position:relative;border-radius:26px;padding:44px 38px;color:#fff;overflow:hidden;background:linear-gradient(150deg,var(--purple),var(--deep));box-shadow:0 30px 70px rgba(44,13,64,.35)}
+.why-card::after{content:'';position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(217,155,43,.35),transparent 70%);top:-90px;inset-inline-end:-90px}
+.why-card img{width:120px;margin-bottom:26px;position:relative}
+.why-card blockquote{margin:0;font:600 clamp(20px,2.2vw,26px)/1.45 var(--fh);position:relative}
+.why-card small{display:block;margin-top:22px;color:rgba(255,255,255,.7);font-size:14px;position:relative}
+.inds{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;position:relative}
+.inds span{font-size:13px;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18)}
+
+/* quote / contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.cinfo{display:grid;gap:14px}
+.ci{display:flex;gap:16px;align-items:center;padding:18px 20px;border-radius:16px;background:var(--paper);border:1px solid var(--line);transition:border-color .3s,transform .3s var(--ease)}
+a.ci:hover{border-color:var(--purple);transform:translateY(-3px)}
+.ci .ic{width:46px;height:46px;border-radius:13px;background:var(--lilac);color:var(--purple);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci .ic svg{width:22px;height:22px}
+.ci small{display:block;color:var(--muted);font-size:12.5px}
+.ci b{font-size:15.5px;color:var(--plum);direction:ltr;unicode-bidi:isolate}
+.ci b.txt{direction:inherit}
+form.quote{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:34px;box-shadow:0 24px 60px rgba(58,17,83,.08)}
+form.quote h3{font-size:22px;color:var(--plum);margin-bottom:6px}
+form.quote .note{color:var(--muted);font-size:13.5px;margin:0 0 22px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fgrid .full{grid-column:1/-1}
+label.f{display:block;font-size:13px;font-weight:600;color:var(--plum)}
+label.f input,label.f select,label.f textarea{display:block;width:100%;margin-top:6px;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;
+  font:15px var(--fb);color:var(--ink);background:var(--cream);transition:border-color .2s,background .2s,box-shadow .2s}
+label.f input:focus,label.f select:focus,label.f textarea:focus{outline:none;border-color:var(--purple);background:#fff;box-shadow:0 0 0 4px rgba(107,36,150,.1)}
+label.f textarea{min-height:110px;resize:vertical}
+form.quote .btn{margin-top:18px;width:100%;justify-content:center}
+
+/* footer */
+footer{background:var(--deep);color:rgba(255,255,255,.7);padding:56px 0 34px;font-size:14px}
+footer .top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer .brand img{height:40px}
+footer .links{display:flex;gap:22px;flex-wrap:wrap}
+footer .links a:hover{color:#fff}
+footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;font-size:13px}
+footer .staff{color:rgba(255,255,255,.55);border-bottom:1px dotted rgba(255,255,255,.35)}
+footer .staff:hover{color:var(--gold2)}
+
+/* service modal */
+.modal{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:20px;
+  background:rgba(20,5,32,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .35s}
+.modal.open{opacity:1;pointer-events:auto}
+.mbox{position:relative;width:min(560px,100%);max-height:90vh;overflow:auto;background:var(--paper);border-radius:26px;padding:36px 34px 30px;
+  transform:translateY(30px) scale(.96);transition:transform .45s var(--ease);box-shadow:0 40px 100px rgba(10,2,18,.5)}
+.modal.open .mbox{transform:none}
+.mbox .ic{width:66px;height:66px;border-radius:18px;background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.mbox .ic svg{width:36px;height:36px}
+.mbox h3{font-size:26px;color:var(--plum);margin-bottom:10px}
+.mbox p{color:var(--muted);margin:0 0 18px}
+.mbox ul{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:10px}
+.mbox li{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.mbox li::before{content:'';flex-shrink:0;width:20px;height:20px;margin-top:2px;border-radius:50%;
+  background:var(--lilac) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.6L14 7.6' fill='none' stroke='%236b2496' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+.mx{position:absolute;top:16px;inset-inline-end:16px;width:38px;height:38px;border-radius:50%;border:0;background:var(--lilac);color:var(--plum);font-size:18px;cursor:pointer;transition:transform .25s}
+.mx:hover{transform:rotate(90deg)}
+.mbox .btn{width:100%;justify-content:center}
+
+#toTop{position:fixed;bottom:22px;inset-inline-end:22px;z-index:40;width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;
+  background:var(--purple);color:#fff;font-size:18px;box-shadow:0 10px 26px rgba(107,36,150,.4);opacity:0;transform:translateY(16px);transition:opacity .3s,transform .3s var(--ease)}
+#toTop.show{opacity:1;transform:none}
+body.switching main,body.switching .hero .wrap,body.switching .nav ul{opacity:0;transition:opacity .2s}
+main,.hero .wrap,.nav ul{transition:opacity .35s}
+
+/* ---------- responsive ---------- */
+@media(max-width:980px){
+  .hero .wrap{grid-template-columns:1fr;text-align:center}
+  .hero p.lead{margin-inline:auto}.hero .ctas,.chips{justify-content:center}
+  .orbit-box{--R:min(175px,40vw);margin-top:30px}
+  .node{width:60px;height:60px;margin:-30px}
+  .node>span{border-radius:18px}.node svg{width:28px;height:28px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:40px}.steps-line{display:none}
+  .why,.contact{grid-template-columns:1fr}
+}
+@media(max-width:860px){
+  .nav ul{position:fixed;top:0;inset-inline-end:0;bottom:0;width:min(300px,82vw);flex-direction:column;gap:4px;margin:0;padding:90px 18px 20px;
+    background:rgba(28,7,43,.97);transform:translateX(105%);transition:transform .4s var(--ease);box-shadow:-20px 0 50px rgba(0,0,0,.4)}
+  html[dir="rtl"] .nav ul{transform:translateX(-105%)}
+  body.menu .nav ul{transform:none}
+  body.menu .nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:transparent;box-shadow:none}
+  body.menu::after{content:'';position:fixed;inset:0;z-index:45;background:rgba(16,4,26,.55)}
+  body.menu{overflow:hidden}
+  .nav ul a{display:block;font-size:17px;padding:12px 16px}
+  .burger{display:block;margin-inline-start:auto;position:relative;z-index:2}
+  .nav .btn.gold{display:none}
+}
+@media(max-width:620px){
+  .wrap{width:calc(100% - 32px)}
+  .sec{padding:76px 0}
+  .svc-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  form.quote{padding:24px 20px}
+  .why-card{padding:34px 26px}
+  .chip{font-size:12.5px}
+  .brand span{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.fade-in,.hero h1 .w>span{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<div id="loader" aria-hidden="true"><img src="assets/logo-white.png" alt=""><i></i></div>
+
+<!-- ============ icon library ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-delivery" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="5" y="13" width="13" height="11" rx="2"/><circle cx="12" cy="34" r="5.5"/><circle cx="37" cy="34" r="5.5"/>
+      <path d="M12 34h10l5.5-11h5l4.5 11"/><path d="M27.5 23l-2.5-6h-4.5"/><path d="M6 24h13"/>
+    </symbol>
+    <symbol id="i-rental" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="15" cy="24" r="8.5"/><circle cx="15" cy="24" r="2.6"/><path d="M23.5 24H43M37 24v6.5M42.5 24v4.5"/>
+    </symbol>
+    <symbol id="i-finance" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 33v-5.5l4.2-8a3 3 0 012.7-1.5h14.6a3 3 0 012.6 1.5l4.6 8h2.8a3 3 0 013 3V33"/>
+      <circle cx="13" cy="33.5" r="3.6"/><circle cx="31" cy="33.5" r="3.6"/><path d="M8 27h28"/>
+      <circle cx="38" cy="11" r="6.5"/><path d="M38 7.8v6.4M36 9.4h3a1.4 1.4 0 010 2.8h-2"/>
+    </symbol>
+    <symbol id="i-customs" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="21" width="28" height="18" rx="1.5"/><path d="M10 21v18M16 21v18M22 21v18M28 21v18"/>
+      <path d="M30 5h9.5L44 9.5V22H30z"/><path d="M33.5 14l2.6 2.6L41 11.7"/>
+    </symbol>
+    <symbol id="i-food" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 24h38l-3.5 16h-31z"/><path d="M15 24v16M24 24v16M33 24v16"/>
+      <path d="M24 24c0-9 6.5-13.5 13-13.5 0 6.8-4.5 13.5-13 13.5z"/><path d="M24 24c-.8-5.6-4.4-9-9.5-9 0 4.5 3.4 9 9.5 9z"/>
+    </symbol>
+    <symbol id="i-truck" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 33V13h25v20"/><path d="M28 19h8.5l6.5 7.5V33h-3"/><path d="M3 33h3.5M16 33h15"/>
+      <circle cx="11" cy="34" r="4.5"/><circle cx="35.5" cy="34" r="4.5"/><path d="M32 19v7.5h11"/>
+    </symbol>
+    <symbol id="i-one" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.2-7 8-7s7 2.5 8 7"/></symbol>
+    <symbol id="i-bill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"/><path d="M9 7h6M9 11h6M9 15h4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-7 4 14 3-7h4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
+    <!-- fleet (wide) -->
+    <symbol id="v-bike" viewBox="0 0 96 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="22" cy="34" r="9"/><circle cx="74" cy="34" r="9"/><path d="M22 34h22l10-18h9l11 18"/><path d="M54 16l-4-8h-7"/><rect x="12" y="10" width="22" height="16" rx="3"/>
+    </symbol>
+    <symbol id="v-car" viewBox="0 0 96 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 34v-8l10-12h40l16 12h12a4 4 0 014 4v4h-5"/><path d="M6 34h7m18 0h34m18 0h0"/><path d="M38 14v12M16 26h70"/>
+      <circle cx="22" cy="35" r="7"/><circle cx="74" cy="35" r="7"/>
+    </symbol>
+    <symbol id="v-pickup" viewBox="0 0 96 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 34V24l12-12h20v12h52v10h-5"/><path d="M6 34h7m18 0h34"/><path d="M38 24H14M38 12v12"/>
+      <circle cx="22" cy="35" r="7"/><circle cx="74" cy="35" r="7"/>
+    </symbol>
+    <symbol id="v-van" viewBox="0 0 96 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 34V20l10-10h70a4 4 0 014 4v20h-5"/><path d="M6 34h7m18 0h34"/><path d="M8 20h22V10M44 10v16M62 10v16"/>
+      <circle cx="22" cy="35" r="7"/><circle cx="74" cy="35" r="7"/>
+    </symbol>
+    <symbol id="v-bus" viewBox="0 0 96 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="8" width="88" height="26" rx="5"/><path d="M4 22h88M18 8v14M32 8v14M46 8v14M60 8v14M74 8v14"/>
+      <circle cx="22" cy="36" r="6"/><circle cx="74" cy="36" r="6"/>
+    </symbol>
+    <symbol id="v-truck" viewBox="0 0 96 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 34V6h56v28"/><path d="M60 16h16l14 14v4h-6"/><path d="M4 34h8m16 0h34"/><path d="M68 16v14h22"/>
+      <circle cx="20" cy="35" r="7"/><circle cx="76" cy="35" r="7"/>
+    </symbol>
+    <symbol id="v-trailer" viewBox="0 0 96 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M70 32V14h12l10 10v8"/><path d="M2 26h60l8 6h22"/><path d="M2 26v6h60"/>
+      <circle cx="12" cy="37" r="5"/><circle cx="24" cy="37" r="5"/><circle cx="80" cy="37" r="5"/><path d="M76 14v10h16"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ navigation ============ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="W Group"><img src="assets/logo-white.png" alt="W Group logo"><span>W GROUP</span></a>
+    <ul id="menu">
+      <li><a href="#services" data-i="nav.services">Services</a></li>
+      <li><a href="#how" data-i="nav.how">How we work</a></li>
+      <li><a href="#fleet" data-i="nav.fleet">Fleet</a></li>
+      <li><a href="#why" data-i="nav.why">Why W Group</a></li>
+      <li><a href="#contact" data-i="nav.contact">Contact</a></li>
+    </ul>
+    <button class="lang" id="langBtn" type="button" aria-label="Switch language">عربي</button>
+    <a href="#contact" class="btn gold sm" data-i="cta.quote">Get a quotation</a>
+    <button class="burger" id="burger" type="button" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- ============ hero ============ -->
+<section class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="grid-lines"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow fade-in" style="transition-delay:.9s" data-i="hero.eyebrow">Doha · State of Qatar</span>
+      <h1 id="heroTitle" data-i="hero.title" data-split>One partner for every move your business makes</h1>
+      <p class="lead fade-in" style="transition-delay:1.25s" data-i="hero.sub">Delivery fleets, car rental, vehicle finance, customs clearance, food distribution and load transportation — run by one team, on one contract, across Qatar.</p>
+      <div class="ctas fade-in" style="transition-delay:1.4s">
+        <a href="#contact" class="btn gold"><span data-i="cta.quote">Get a quotation</span> <span class="arr">→</span></a>
+        <a href="#services" class="btn line" data-i="hero.cta2">Explore our services</a>
+      </div>
+      <div class="chips fade-in" style="transition-delay:1.55s">
+        <div class="chip"><b>6</b><span data-i="chip.1">integrated services</span></div>
+        <div class="chip"><b>7</b><span data-i="chip.2">vehicle types, bikes to lowbeds</span></div>
+        <div class="chip"><b>1</b><span data-i="chip.3">account &amp; one statement</span></div>
+      </div>
+    </div>
+    <div class="orbit-box fade-in" style="transition-delay:1.1s" aria-hidden="true">
+      <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <div class="core"><img src="assets/logo-white.png" alt=""></div>
+      <div class="orbit">
+        <div class="node" style="--a:-90deg"><span data-open="delivery"><svg><use href="#i-delivery"/></svg></span></div>
+        <div class="node" style="--a:-30deg"><span data-open="rental"><svg><use href="#i-rental"/></svg></span></div>
+        <div class="node" style="--a:30deg"><span data-open="finance"><svg><use href="#i-finance"/></svg></span></div>
+        <div class="node" style="--a:90deg"><span data-open="customs"><svg><use href="#i-customs"/></svg></span></div>
+        <div class="node" style="--a:150deg"><span data-open="food"><svg><use href="#i-food"/></svg></span></div>
+        <div class="node" style="--a:210deg"><span data-open="transport"><svg><use href="#i-truck"/></svg></span></div>
+      </div>
+    </div>
+  </div>
+  <a href="#services" class="scroll-cue" aria-label="Scroll down"></a>
+</section>
+
+<main>
+<!-- ============ services ============ -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker" data-i="sv.kicker">What we do</span>
+      <h2 data-i="sv.title">Six services. One accountable partner.</h2>
+      <p data-i="sv.sub">Pick one service or combine several — you deal with one account manager and receive one clear statement.</p>
+    </div>
+    <div class="svc-grid" id="svcGrid"></div>
+  </div>
+</section>
+
+<!-- ============ how we work ============ -->
+<section class="sec alt" id="how">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="kicker" data-i="how.kicker">How we work</span>
+      <h2 data-i="how.title">From first call to running smoothly</h2>
+    </div>
+    <div class="steps" id="steps">
+      <div class="steps-line"><i></i></div>
+      <div class="step rv" style="--d:.0s"><div class="dot" style="--d:.2s">01</div><h3 data-i="s1.t">Tell us what you need</h3><p data-i="s1.p">Call, email or send the quote form — the service, quantity and period.</p></div>
+      <div class="step rv" style="--d:.12s"><div class="dot" style="--d:.6s">02</div><h3 data-i="s2.t">Receive a clear quotation</h3><p data-i="s2.p">An itemised quotation with every charge spelled out — no surprises later.</p></div>
+      <div class="step rv" style="--d:.24s"><div class="dot" style="--d:1s">03</div><h3 data-i="s3.t">Sign one agreement</h3><p data-i="s3.p">Terms, vehicles and charges in one agreement you can review any time.</p></div>
+      <div class="step rv" style="--d:.36s"><div class="dot" style="--d:1.4s">04</div><h3 data-i="s4.t">We deliver, you track</h3><p data-i="s4.p">Monthly invoices and statements of account keep every riyal visible.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ fleet ============ -->
+<section class="fleet" id="fleet">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="kicker" data-i="fl.kicker">Our fleet</span>
+      <h2 data-i="fl.title">The right vehicle for every job</h2>
+      <p data-i="fl.sub">From a single delivery bike to a lowbed trailer — for a day, a month or the long term.</p>
+    </div>
+  </div>
+  <div class="marquee rv" id="marquee"></div>
+</section>
+
+<!-- ============ why ============ -->
+<section class="sec" id="why">
+  <div class="wrap why">
+    <div>
+      <div class="head rv" style="margin-bottom:34px">
+        <span class="kicker" data-i="why.kicker">Why W Group</span>
+        <h2 data-i="why.title">Built for businesses that can't afford delays</h2>
+      </div>
+      <div class="why-list">
+        <div class="wi rv" style="--d:.0s"><div class="ic"><svg><use href="#i-one"/></svg></div><div><h3 data-i="w1.t">One partner, six services</h3><p data-i="w1.p">Fewer vendors, fewer calls — one point of contact for everything.</p></div></div>
+        <div class="wi rv" style="--d:.1s"><div class="ic"><svg><use href="#i-bill"/></svg></div><div><h3 data-i="w2.t">Transparent billing</h3><p data-i="w2.p">Numbered invoices, receipts and statements of account for every transaction.</p></div></div>
+        <div class="wi rv" style="--d:.2s"><div class="ic"><svg><use href="#i-shield"/></svg></div><div><h3 data-i="w3.t">Compliance handled</h3><p data-i="w3.p">Staff documentation, WPS payroll and vehicle papers kept in order.</p></div></div>
+        <div class="wi rv" style="--d:.3s"><div class="ic"><svg><use href="#i-pulse"/></svg></div><div><h3 data-i="w4.t">Run on our own system</h3><p data-i="w4.p">Our management system tracks every vehicle, driver and job, every day.</p></div></div>
+      </div>
+    </div>
+    <div class="why-card rv" style="--d:.15s">
+      <img src="assets/logo-white.png" alt="">
+      <blockquote data-i="why.quote">“Whatever needs to move — people, cars, cargo or paperwork — we make it move on time.”</blockquote>
+      <small data-i="why.sign">W Group W.L.L · Doha, Qatar</small>
+      <div class="inds" id="inds"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ contact / quote ============ -->
+<section class="sec alt" id="contact">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker" data-i="ct.kicker">Contact</span>
+      <h2 data-i="ct.title">Tell us what you need — we'll send you a quotation</h2>
+    </div>
+    <div class="contact">
+      <div class="cinfo">
+        <a class="ci rv" href="tel:+97444490000"><div class="ic"><svg><use href="#i-phone"/></svg></div><div><small data-i="ct.phone">Call us</small><b>+974 4449 0000</b></div></a>
+        <a class="ci rv" style="--d:.08s" href="mailto:info@wgroup.qa"><div class="ic"><svg><use href="#i-mail"/></svg></div><div><small data-i="ct.email">Email</small><b>info@wgroup.qa</b></div></a>
+        <div class="ci rv" style="--d:.16s"><div class="ic"><svg><use href="#i-pin"/></svg></div><div><small data-i="ct.addr">Address</small><b class="txt" data-i="ct.addrv">P O Box 3232, Doha, State of Qatar</b></div></div>
+        <div class="ci rv" style="--d:.24s"><div class="ic"><svg><use href="#i-doc"/></svg></div><div><small data-i="ct.cr">Commercial registration</small><b>CR 235967</b></div></div>
+      </div>
+      <form class="quote rv" id="quoteForm" style="--d:.1s" novalidate>
+        <h3 data-i="q.title">Request a quotation</h3>
+        <p class="note" data-i="q.note">Send the details below — your email app opens with everything filled in.</p>
+        <div class="fgrid">
+          <label class="f"><span data-i="q.name">Your name</span><input name="name" required autocomplete="name"></label>
+          <label class="f"><span data-i="q.company">Company</span><input name="company" autocomplete="organization"></label>
+          <label class="f"><span data-i="q.phone">Phone</span><input name="phone" type="tel" required autocomplete="tel" dir="ltr"></label>
+          <label class="f"><span data-i="q.service">Service</span><select name="service" id="qService"></select></label>
+          <label class="f full"><span data-i="q.msg">What do you need?</span><textarea name="msg" data-ph="q.msgph" placeholder="e.g. 10 cars with drivers for 12 months"></textarea></label>
+        </div>
+        <button class="btn gold" type="submit"><span data-i="q.send">Send request</span> <span class="arr">→</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a href="#top" class="brand"><img src="assets/logo-white.png" alt="W Group"><span>W GROUP W.L.L</span></a>
+      <nav class="links">
+        <a href="#services" data-i="nav.services">Services</a><a href="#how" data-i="nav.how">How we work</a>
+        <a href="#fleet" data-i="nav.fleet">Fleet</a><a href="#contact" data-i="nav.contact">Contact</a>
+      </nav>
+    </div>
+    <div class="bottom">
+      <span>© <span id="yr">2026</span> W Group W.L.L · CR 235967 · <span data-i="ft.rights">All rights reserved.</span></span>
+      <a class="staff" href="/wgroup/" data-i="ft.staff">Staff login</a>
+    </div>
+  </div>
+</footer>
+
+<!-- service detail -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="mbox">
+    <button class="mx" type="button" id="mClose" aria-label="Close">✕</button>
+    <div class="ic"><svg id="mIcon"><use href="#i-delivery"/></svg></div>
+    <h3 id="mTitle"></h3>
+    <p id="mText"></p>
+    <ul id="mList"></ul>
+    <a href="#contact" class="btn gold" id="mCta"><span data-i="m.cta">Request a quotation for this service</span></a>
+  </div>
+</div>
+<button id="toTop" type="button" aria-label="Back to top">↑</button>
+
+<script>
+(function(){
+/* ================= content (English / Arabic) ================= */
+var SERVICES=[
+  {k:'delivery',icon:'i-delivery',
+   en:{t:'Delivery Group',s:'Trained riders and drivers on bikes and cars, ready for delivery platforms, restaurants and retailers.',
+       p:['Full-time bike and car fleets','Daily performance tracking','Uniforms, equipment and documentation handled','WPS-compliant payroll']},
+   ar:{t:'مجموعة التوصيل',s:'مندوبو توصيل وسائقون مدرَّبون على الدراجات النارية والسيارات، جاهزون لمنصات التوصيل والمطاعم ومتاجر التجزئة.',
+       p:['أساطيل بدوام كامل من الدراجات النارية والسيارات','متابعة يومية للأداء','الزي الموحد والمعدات والوثائق علينا','رواتب متوافقة مع نظام حماية الأجور (WPS)']}},
+  {k:'rental',icon:'i-rental',
+   en:{t:'Car Rental',s:'Daily, monthly and long-term rentals — self-drive or with a professional driver.',
+       p:['Self-drive or with a driver','Corporate monthly contracts','Documented handover and return inspection','Service and maintenance included on driver plans']},
+   ar:{t:'تأجير السيارات',s:'تأجير يومي وشهري وطويل الأجل — بقيادة ذاتية أو مع سائق محترف.',
+       p:['بقيادة ذاتية أو مع سائق','عقود شهرية للشركات','فحص موثّق عند التسليم والاستلام','الصيانة والخدمة مشمولة في باقات السائق']}},
+  {k:'finance',icon:'i-finance',
+   en:{t:'Car Sales on Finance',s:'Drive now, own later — lease-to-own plans with a clear down payment and fixed monthly instalments.',
+       p:['Lease-to-own plans','Fixed monthly instalments','Cars, pickups, vans and more','Transparent contract and statement']},
+   ar:{t:'بيع السيارات بالتقسيط',s:'قُد الآن وتملّك لاحقاً — خطط تأجير منتهٍ بالتمليك بدفعة أولى واضحة وأقساط شهرية ثابتة.',
+       p:['تأجير منتهٍ بالتمليك','أقساط شهرية ثابتة','سيارات وبيك أب وفانات وغيرها','عقد وكشف حساب شفافان']}},
+  {k:'customs',icon:'i-customs',
+   en:{t:'Customs Clearance',s:'Fast, accurate clearance of your shipments — customs declarations (Bayan), containers and bills of lading handled end to end.',
+       p:['Customs declaration (Bayan) filing','Container and B/L / AWB handling','Sea, air and land shipments','Every invoice carries your Bayan and container numbers']},
+   ar:{t:'التخليص الجمركي',s:'تخليص سريع ودقيق لشحناتك — البيان الجمركي والحاويات وبوالص الشحن من البداية إلى النهاية.',
+       p:['إعداد وتقديم البيان الجمركي','متابعة الحاويات وبوالص الشحن البحري والجوي','شحنات بحرية وجوية وبرية','كل فاتورة تحمل رقم البيان ورقم الحاوية']}},
+  {k:'food',icon:'i-food',
+   en:{t:'Food Distribution',s:'Sourcing and distribution of food products to restaurants, retailers and wholesalers.',
+       p:['Reliable sourcing','Stock managed from receipt to delivery','Delivery notes and signed receipts','Flexible order sizes']},
+   ar:{t:'توزيع المواد الغذائية',s:'توريد وتوزيع المواد الغذائية للمطاعم ومحلات التجزئة وتجار الجملة.',
+       p:['توريد موثوق','إدارة المخزون من الاستلام حتى التسليم','أذونات تسليم وإيصالات موقّعة','كميات طلب مرنة']}},
+  {k:'transport',icon:'i-truck',
+   en:{t:'Load Transportation',s:'Pickups, vans, trucks and lowbed trailers to move goods and equipment anywhere in Qatar.',
+       p:['Pickups to lowbed trailers','Single trips or monthly contracts','Experienced drivers','Construction, retail and industrial loads']},
+   ar:{t:'نقل البضائع',s:'بيك أب وفانات وشاحنات ومقطورات منخفضة لنقل البضائع والمعدات إلى أي مكان في قطر.',
+       p:['من البيك أب إلى المقطورات المنخفضة','رحلات فردية أو عقود شهرية','سائقون ذوو خبرة','حمولات البناء والتجزئة والصناعة']}}
+];
+var FLEET=[['v-bike','Bike','دراجة نارية'],['v-car','Car','سيارة'],['v-pickup','Pickup','بيك أب'],['v-van','Van','فان'],
+  ['v-bus','Bus','حافلة'],['v-truck','Truck','شاحنة'],['v-trailer','Lowbed trailer','مقطورة منخفضة']];
+var INDS={en:['Delivery platforms','Restaurants & cafés','Retail & supermarkets','Importers & traders','Construction & contracting','Corporate & government'],
+          ar:['منصات التوصيل','المطاعم والمقاهي','التجزئة والسوبرماركت','المستوردون والتجار','البناء والمقاولات','الشركات والجهات الحكومية']};
+var T={
+ 'nav.services':['Services','خدماتنا'],'nav.how':['How we work','طريقة عملنا'],'nav.fleet':['Fleet','أسطولنا'],
+ 'nav.why':['Why W Group','لماذا W Group'],'nav.contact':['Contact','تواصل معنا'],'cta.quote':['Get a quotation','اطلب عرض سعر'],
+ 'hero.eyebrow':['Doha · State of Qatar','الدوحة · دولة قطر'],
+ 'hero.title':['One partner for every move your business makes','شريك واحد لكل خطوة يخطوها عملك'],
+ 'hero.sub':['Delivery fleets, car rental, vehicle finance, customs clearance, food distribution and load transportation — run by one team, on one contract, across Qatar.',
+             'أساطيل التوصيل، تأجير السيارات، تمويل المركبات، التخليص الجمركي، توزيع المواد الغذائية ونقل البضائع — يديرها فريق واحد وبعقد واحد في جميع أنحاء قطر.'],
+ 'hero.cta2':['Explore our services','استكشف خدماتنا'],
+ 'chip.1':['integrated services','خدمات متكاملة'],'chip.2':['vehicle types, bikes to lowbeds','أنواع من المركبات، من الدراجات إلى المقطورات'],
+ 'chip.3':['account & one statement','حساب وكشف حساب واحد'],
+ 'sv.kicker':['What we do','ماذا نقدم'],'sv.title':['Six services. One accountable partner.','ست خدمات. شريك واحد مسؤول.'],
+ 'sv.sub':['Pick one service or combine several — you deal with one account manager and receive one clear statement.',
+           'اختر خدمة واحدة أو اجمع بين عدة خدمات — تتعامل مع مدير حساب واحد وتستلم كشف حساب واحداً واضحاً.'],
+ 'sv.more':['View details','عرض التفاصيل'],
+ 'how.kicker':['How we work','طريقة عملنا'],'how.title':['From first call to running smoothly','من أول اتصال حتى انطلاق العمل بسلاسة'],
+ 's1.t':['Tell us what you need','أخبرنا باحتياجك'],'s1.p':['Call, email or send the quote form — the service, quantity and period.','اتصل أو راسلنا أو أرسل نموذج طلب العرض — الخدمة والكمية والمدة.'],
+ 's2.t':['Receive a clear quotation','استلم عرض سعر واضحاً'],'s2.p':['An itemised quotation with every charge spelled out — no surprises later.','عرض سعر مفصّل يوضّح كل التكاليف — بلا مفاجآت لاحقاً.'],
+ 's3.t':['Sign one agreement','وقّع اتفاقية واحدة'],'s3.p':['Terms, vehicles and charges in one agreement you can review any time.','الشروط والمركبات والرسوم في اتفاقية واحدة يمكنك مراجعتها في أي وقت.'],
+ 's4.t':['We deliver, you track','ننفّذ وأنت تتابع'],'s4.p':['Monthly invoices and statements of account keep every riyal visible.','فواتير شهرية وكشوف حساب تُظهر كل ريال بوضوح.'],
+ 'fl.kicker':['Our fleet','أسطولنا'],'fl.title':['The right vehicle for every job','المركبة المناسبة لكل مهمة'],
+ 'fl.sub':['From a single delivery bike to a lowbed trailer — for a day, a month or the long term.','من دراجة توصيل واحدة إلى مقطورة منخفضة — ليوم أو شهر أو لفترة طويلة.'],
+ 'why.kicker':['Why W Group','لماذا W Group'],'why.title':["Built for businesses that can't afford delays",'مصمَّمون للشركات التي لا تحتمل التأخير'],
+ 'w1.t':['One partner, six services','شريك واحد لست خدمات'],'w1.p':['Fewer vendors, fewer calls — one point of contact for everything.','موردون أقل واتصالات أقل — نقطة تواصل واحدة لكل شيء.'],
+ 'w2.t':['Transparent billing','فوترة شفافة'],'w2.p':['Numbered invoices, receipts and statements of account for every transaction.','فواتير وإيصالات مرقّمة وكشوف حساب لكل معاملة.'],
+ 'w3.t':['Compliance handled','الامتثال علينا'],'w3.p':['Staff documentation, WPS payroll and vehicle papers kept in order.','وثائق الموظفين ورواتب نظام حماية الأجور وأوراق المركبات منظّمة دائماً.'],
+ 'w4.t':['Run on our own system','نعمل بنظامنا الخاص'],'w4.p':['Our management system tracks every vehicle, driver and job, every day.','نظامنا الإداري يتابع كل مركبة وسائق ومهمة، كل يوم.'],
+ 'why.quote':['“Whatever needs to move — people, cars, cargo or paperwork — we make it move on time.”','«كل ما يحتاج إلى أن يتحرك — أشخاص أو سيارات أو بضائع أو معاملات — نحرّكه في وقته.»'],
+ 'why.sign':['W Group W.L.L · Doha, Qatar','W Group ذ.م.م · الدوحة، قطر'],
+ 'ct.kicker':['Contact','تواصل معنا'],'ct.title':["Tell us what you need — we'll send you a quotation",'أخبرنا باحتياجك وسنرسل لك عرض السعر'],
+ 'ct.phone':['Call us','اتصل بنا'],'ct.email':['Email','البريد الإلكتروني'],'ct.addr':['Address','العنوان'],
+ 'ct.addrv':['P O Box 3232, Doha, State of Qatar','ص.ب 3232، الدوحة، دولة قطر'],'ct.cr':['Commercial registration','السجل التجاري'],
+ 'q.title':['Request a quotation','اطلب عرض سعر'],'q.note':['Send the details below — your email app opens with everything filled in.','أرسل التفاصيل أدناه — سيفتح تطبيق البريد لديك والبيانات جاهزة.'],
+ 'q.name':['Your name','الاسم'],'q.company':['Company','الشركة'],'q.phone':['Phone','رقم الهاتف'],'q.service':['Service','الخدمة'],
+ 'q.msg':['What do you need?','ما الذي تحتاجه؟'],'q.msgph':['e.g. 10 cars with drivers for 12 months','مثال: ١٠ سيارات مع سائقين لمدة ١٢ شهراً'],
+ 'q.several':['Several services','عدة خدمات'],'q.send':['Send request','أرسل الطلب'],
+ 'q.need':['Please add your name and phone number.','يرجى إدخال الاسم ورقم الهاتف.'],
+ 'm.cta':['Request a quotation for this service','اطلب عرض سعر لهذه الخدمة'],
+ 'ft.rights':['All rights reserved.','جميع الحقوق محفوظة.'],'ft.staff':['Staff login','دخول الموظفين']
+};
+var lang='en';
+try{ var q=new URLSearchParams(location.search).get('lang'); lang=(q==='ar'||q==='en')?q:(localStorage.getItem('wg_site_lang')||'en'); }catch(e){}
+var L=function(){ return lang==='ar'?1:0; };
+
+/* ================= build dynamic blocks ================= */
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+function buildServices(){
+  document.getElementById('svcGrid').innerHTML=SERVICES.map(function(s,i){
+    var c=s[lang];
+    return '<article class="svc rv" style="--d:'+(i%3*0.1)+'s" data-open="'+s.k+'" tabindex="0" role="button">'+
+      '<span class="num">0'+(i+1)+'</span><div class="ic"><svg><use href="#'+s.icon+'"/></svg></div>'+
+      '<h3>'+esc(c.t)+'</h3><p>'+esc(c.s)+'</p><span class="more">'+T['sv.more'][L()]+' <span class="arr">→</span></span></article>';
+  }).join('');
+  var sel=document.getElementById('qService'), cur=sel.value;
+  sel.innerHTML=SERVICES.map(function(s){ return '<option value="'+s.k+'">'+esc(s[lang].t)+'</option>'; }).join('')+
+    '<option value="several">'+T['q.several'][L()]+'</option>';
+  if(cur) sel.value=cur;
+}
+function buildFleet(){
+  var cards=FLEET.map(function(v){ return '<div class="veh"><svg><use href="#'+v[0]+'"/></svg><b>'+(lang==='ar'?v[2]:v[1])+'</b></div>'; }).join('');
+  document.getElementById('marquee').innerHTML='<div class="track">'+cards+'</div><div class="track" aria-hidden="true">'+cards+'</div>';
+  document.getElementById('inds').innerHTML=INDS[lang].map(function(x){ return '<span>'+esc(x)+'</span>'; }).join('');
+}
+function splitTitle(){
+  var h=document.getElementById('heroTitle'), words=T['hero.title'][L()].split(' ');
+  var hi = lang==='ar' ? [0,1] : [words.length-3,words.length-2,words.length-1];   // highlight "your business makes" / "شريك واحد"
+  h.innerHTML=words.map(function(w,i){
+    var inner=hi.indexOf(i)>=0?'<em>'+esc(w)+'</em>':esc(w);
+    return '<span class="w"><span style="transition-delay:'+(0.75+i*0.07)+'s">'+inner+'</span></span>';
+  }).join(' ');
+}
+function applyLang(){
+  var html=document.documentElement;
+  html.lang=lang; html.dir=(lang==='ar'?'rtl':'ltr');
+  document.querySelectorAll('[data-i]').forEach(function(el){
+    var k=el.getAttribute('data-i'); if(T[k] && !el.hasAttribute('data-split')) el.textContent=T[k][L()];
+  });
+  document.querySelectorAll('[data-ph]').forEach(function(el){ var k=el.getAttribute('data-ph'); if(T[k]) el.placeholder=T[k][L()]; });
+  document.getElementById('langBtn').textContent=(lang==='ar'?'English':'عربي');
+  document.title = lang==='ar' ? 'W Group ذ.م.م — التوصيل والتأجير وتمويل السيارات والتخليص الجمركي والتوزيع والنقل في قطر'
+                               : 'W Group W.L.L — Delivery, Rental, Car Finance, Customs, Food Distribution & Transport in Qatar';
+  splitTitle(); buildServices(); buildFleet(); observe();
+}
+document.getElementById('langBtn').addEventListener('click',function(){
+  document.body.classList.add('switching');
+  setTimeout(function(){
+    lang=(lang==='ar'?'en':'ar');
+    try{ localStorage.setItem('wg_site_lang',lang); }catch(e){}
+    applyLang();
+    document.querySelectorAll('.rv').forEach(function(el){ if(el.getBoundingClientRect().top<innerHeight) el.classList.add('in'); });
+    document.body.classList.remove('switching');
+  },220);
+});
+
+/* ================= scroll reveal ================= */
+var io=('IntersectionObserver' in window)? new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.14, rootMargin:'0px 0px -40px 0px'}) : null;
+function observe(){
+  document.querySelectorAll('.rv:not(.in), #steps:not(.in)').forEach(function(el){ if(io) io.observe(el); else el.classList.add('in'); });
+}
+
+/* ================= nav ================= */
+var nav=document.getElementById('nav'), toTop=document.getElementById('toTop');
+var secs=['services','how','fleet','why','contact'];
+function onScroll(){
+  var y=window.scrollY;
+  nav.classList.toggle('solid', y>40);
+  toTop.classList.toggle('show', y>700);
+  var cur='';
+  secs.forEach(function(id){ var s=document.getElementById(id); if(s && s.getBoundingClientRect().top < innerHeight*0.4) cur=id; });
+  document.querySelectorAll('#menu a').forEach(function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+cur); });
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+toTop.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+var burger=document.getElementById('burger');
+function setMenu(on){ document.body.classList.toggle('menu',on); burger.textContent=on?'✕':'☰'; }
+burger.addEventListener('click',function(){ setMenu(!document.body.classList.contains('menu')); });
+document.getElementById('menu').addEventListener('click',function(e){ if(e.target.tagName==='A') setMenu(false); });
+
+/* ================= service modal ================= */
+var modal=document.getElementById('modal'), current='';
+function openSvc(k){
+  var s=SERVICES.filter(function(x){ return x.k===k; })[0]; if(!s) return;
+  current=k; var c=s[lang];
+  document.getElementById('mIcon').innerHTML='<use href="#'+s.icon+'"/>';
+  document.getElementById('mTitle').textContent=c.t;
+  document.getElementById('mText').textContent=c.s;
+  document.getElementById('mList').innerHTML=c.p.map(function(p){ return '<li>'+esc(p)+'</li>'; }).join('');
+  modal.classList.add('open'); document.getElementById('mClose').focus();
+}
+function closeSvc(){ modal.classList.remove('open'); }
+document.addEventListener('click',function(e){
+  var t=e.target.closest('[data-open]'); if(t){ openSvc(t.getAttribute('data-open')); }
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape') closeSvc();
+  if((e.key==='Enter'||e.key===' ') && e.target.matches && e.target.matches('.svc')){ e.preventDefault(); openSvc(e.target.getAttribute('data-open')); }
+});
+modal.addEventListener('click',function(e){ if(e.target===modal) closeSvc(); });
+document.getElementById('mClose').addEventListener('click',closeSvc);
+document.getElementById('mCta').addEventListener('click',function(){ document.getElementById('qService').value=current; closeSvc(); });
+
+/* ================= quote form → email ================= */
+document.getElementById('quoteForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=e.target, name=f.name.value.trim(), phone=f.phone.value.trim();
+  if(!name || !phone){ alertMsg(T['q.need'][L()]); (name?f.phone:f.name).focus(); return; }
+  var svc=f.service.options[f.service.selectedIndex].text;
+  var body='Name: '+name+'\nCompany: '+f.company.value.trim()+'\nPhone: '+phone+'\nService: '+svc+'\n\n'+f.msg.value.trim();
+  location.href='mailto:info@wgroup.qa?subject='+encodeURIComponent('Quotation request — '+svc+(f.company.value?(' — '+f.company.value.trim()):''))+
+    '&body='+encodeURIComponent(body);
+});
+function alertMsg(m){
+  var n=document.createElement('div');
+  n.textContent=m; n.style.cssText='position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:#3a1153;color:#fff;padding:12px 20px;border-radius:12px;z-index:90;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.3)';
+  document.body.appendChild(n); setTimeout(function(){ n.remove(); },2600);
+}
+
+/* ================= start ================= */
+document.getElementById('yr').textContent=new Date().getFullYear();
+applyLang(); onScroll();
+function ready(){ document.body.classList.add('ready'); setTimeout(function(){ var l=document.getElementById('loader'); if(l) l.style.display='none'; },1300); }
+if(document.readyState==='complete') setTimeout(ready,700); else window.addEventListener('load',function(){ setTimeout(ready,700); });
+setTimeout(ready,3500);   // never stay on the loader
+})();
+</script>
+</body>
+</html>
